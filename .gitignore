@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Model Weights & Training Runs
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+weights/
+runs/
+yolo_runs/
+
+# Dataset & Data folders (CRITICAL: Ignore raw & processed dataset from git)
+data/
+Dataset/
+datasets/
+raw_data/
+processed_data/
+*/data/
+*/Dataset/
+*/datasets/
+outputs/
+crops/
+test_results/
+
+# Ultralytics cache & settings
+*.cache
+ultralytics/
+
+# Logs & temporary files
+*.log
+scratch/
+tmp/
+temp/

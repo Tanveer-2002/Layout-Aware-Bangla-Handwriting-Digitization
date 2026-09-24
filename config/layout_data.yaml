@@ -1,0 +1,13 @@
+# YOLO Dataset Configuration for Bangla Document Layout Detection
+# Path is relative to the repository root or an absolute path
+path: data/yolo_dataset
+
+train: images/train
+val: images/val
+test: images/test
+
+# Classes in BN-HTRd dataset
+# In the raw annotations, lines are marked as class 1 (classes: [word, line]).
+# During dataset prep, line boxes are normalized and re-indexed to 0: text_line.
+names:
+  0: text_line
