@@ -60,13 +60,15 @@ def train_trocr(
     model.config.pad_token_id = tokenizer.pad_token_id
     model.config.vocab_size = model.config.decoder.vocab_size
 
-    # Beam search parameters
-    model.config.eos_token_id = tokenizer.sep_token_id
-    model.config.max_length = 64
-    model.config.early_stopping = True
-    model.config.no_repeat_ngram_size = 3
-    model.config.length_penalty = 2.0
-    model.config.num_beams = 4
+    # Generation parameters (must be in generation_config for new huggingface versions)
+    model.generation_config.decoder_start_token_id = tokenizer.cls_token_id
+    model.generation_config.pad_token_id = tokenizer.pad_token_id
+    model.generation_config.eos_token_id = tokenizer.sep_token_id
+    model.generation_config.max_length = 64
+    model.generation_config.early_stopping = True
+    model.generation_config.no_repeat_ngram_size = 3
+    model.generation_config.length_penalty = 2.0
+    model.generation_config.num_beams = 4
 
     print(f"Loading dataset from: {csv_path}")
     df = pd.read_csv(csv_path).dropna()
